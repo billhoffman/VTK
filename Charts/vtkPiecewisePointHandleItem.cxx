@@ -28,6 +28,7 @@
 #include "vtkControlPointsItem.h"
 #include "vtkTransform2D.h"
 #include "vtkNew.h"
+#include <vtksys/stl/algorithm>
 
 enum enumPointHandleType
   {

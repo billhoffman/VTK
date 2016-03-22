@@ -20,6 +20,7 @@
 #include "vtkStdString.h"
 #include "vtkObjectBase.h"
 #include "vtkSmartPointerBase.h"
+#include <vtksys/ios/sstream>
 
 #define VTKOSTREAM_OPERATOR(type) \
   vtkOStreamWrapper& vtkOStreamWrapper::operator << (type a) \
@@ -57,7 +58,9 @@ VTKOSTREAM_OPERATOR(vtkObjectBase&);
 VTKOSTREAM_OPERATOR(const vtkLargeInteger&);
 VTKOSTREAM_OPERATOR(const vtkSmartPointerBase&);
 VTKOSTREAM_OPERATOR(const vtkStdString&);
-VTKOSTREAM_OPERATOR(ostream&);
+vtkOStreamWrapper& vtkOStreamWrapper::operator
+<< ( vtksys_ios::ostringstream& a)
+{ this->ostr << a.str(); return *this; }
 VTKOSTREAM_OPERATOR(const char*);
 VTKOSTREAM_OPERATOR(void*);
 VTKOSTREAM_OPERATOR(char);

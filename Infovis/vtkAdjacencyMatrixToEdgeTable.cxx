@@ -33,6 +33,7 @@
 
 #include <vtksys/stl/map>
 #include <vtksys/stl/functional>
+#include <vtksys/stl/algorithm>
 
 // ----------------------------------------------------------------------
 

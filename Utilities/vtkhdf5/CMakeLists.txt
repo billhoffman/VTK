@@ -180,7 +180,7 @@ SET_GLOBAL_VARIABLE(HDF5_LIBRARIES_TO_EXPORT "")
 # Run all the CMake configuration tests for our build environment
 #-----------------------------------------------------------------------------
 INCLUDE (${HDF5_SOURCE_DIR}/ConfigureChecks.cmake)
-
+message("hello")
 #-----------------------------------------------------------------------------
 # Option to use legacy naming for windows libs/programs, default is legacy
 #-----------------------------------------------------------------------------

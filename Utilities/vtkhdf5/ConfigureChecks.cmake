@@ -484,7 +484,7 @@ ENDMACRO (HDF5_FUNCTION_TEST)
 # Check a bunch of other functions
 #-----------------------------------------------------------------------------
 IF (WINDOWS)
-  SET (H5_HAVE_TIMEZONE 1)
+  SET (H5_HAVE_TIMEZONE 0)
   SET (H5_HAVE_FUNCTION 1)
 ELSE (WINDOWS)
   FOREACH (test

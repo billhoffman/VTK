@@ -33,6 +33,7 @@ class vtkObjectBase;
 class vtkLargeInteger;
 class vtkSmartPointerBase;
 class vtkStdString;
+#include <vtksys/ios/iosfwd>
 
 class VTK_COMMON_EXPORT vtkOStreamWrapper
 {
@@ -58,7 +59,7 @@ public:
   vtkOStreamWrapper& operator << (const vtkLargeInteger&);
   vtkOStreamWrapper& operator << (const vtkSmartPointerBase&);
   vtkOStreamWrapper& operator << (const vtkStdString&);
-  vtkOStreamWrapper& operator << (ostream&);
+  vtkOStreamWrapper& operator << (vtksys_ios::ostringstream&);
   vtkOStreamWrapper& operator << (const char*);
   vtkOStreamWrapper& operator << (void*);
   vtkOStreamWrapper& operator << (char);

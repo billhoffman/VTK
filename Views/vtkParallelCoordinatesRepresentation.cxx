@@ -80,6 +80,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include <vector>
 #include <vtksys/ios/sstream>
+#include <vtksys/stl/algorithm>
 
 vtkStandardNewMacro(vtkParallelCoordinatesRepresentation);
 

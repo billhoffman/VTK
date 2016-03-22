@@ -36,6 +36,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkTable.h"
 #include "vtkTimerLog.h"
 #include "vtkUnsignedIntArray.h"
+#include <vtksys/stl/algorithm>
 
 #define VTK_CREATE(type, name) \
   vtkSmartPointer<type> name = vtkSmartPointer<type>::New()
